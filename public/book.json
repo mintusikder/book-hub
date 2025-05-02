@@ -1,0 +1,163 @@
+[
+    {
+      "id": 1,
+      "img": "https://covers.openlibrary.org/b/id/10579883-L.jpg",
+      "bookName": "The Silent Patient",
+      "author": "Alex Michaelides",
+      "totalEdition": 4,
+      "publishYear": 2019
+    },
+    {
+      "id": 2,
+      "img": "https://covers.openlibrary.org/b/id/10579744-L.jpg",
+      "bookName": "Atomic Habits",
+      "author": "James Clear",
+      "totalEdition": 6,
+      "publishYear": 2018
+    },
+    {
+      "id": 3,
+      "img": "https://covers.openlibrary.org/b/id/10578965-L.jpg",
+      "bookName": "The Alchemist",
+      "author": "Paulo Coelho",
+      "totalEdition": 10,
+      "publishYear": 1988
+    },
+    {
+      "id": 4,
+      "img": "https://covers.openlibrary.org/b/id/10580060-L.jpg",
+      "bookName": "Educated",
+      "author": "Tara Westover",
+      "totalEdition": 3,
+      "publishYear": 2018
+    },
+    {
+      "id": 5,
+      "img": "https://covers.openlibrary.org/b/id/10580342-L.jpg",
+      "bookName": "Becoming",
+      "author": "Michelle Obama",
+      "totalEdition": 5,
+      "publishYear": 2018
+    },
+    {
+      "id": 6,
+      "img": "https://covers.openlibrary.org/b/id/10580014-L.jpg",
+      "bookName": "The Power of Now",
+      "author": "Eckhart Tolle",
+      "totalEdition": 7,
+      "publishYear": 1997
+    },
+    {
+      "id": 7,
+      "img": "https://covers.openlibrary.org/b/id/10579499-L.jpg",
+      "bookName": "The Four Agreements",
+      "author": "Don Miguel Ruiz",
+      "totalEdition": 8,
+      "publishYear": 1997
+    },
+    {
+      "id": 8,
+      "img": "https://covers.openlibrary.org/b/id/10578921-L.jpg",
+      "bookName": "Rich Dad Poor Dad",
+      "author": "Robert T. Kiyosaki",
+      "totalEdition": 9,
+      "publishYear": 2000
+    },
+    {
+      "id": 9,
+      "img": "https://covers.openlibrary.org/b/id/10580450-L.jpg",
+      "bookName": "The Subtle Art of Not Giving a F*ck",
+      "author": "Mark Manson",
+      "totalEdition": 5,
+      "publishYear": 2016
+    },
+    {
+      "id": 10,
+      "img": "https://covers.openlibrary.org/b/id/10580321-L.jpg",
+      "bookName": "Daring Greatly",
+      "author": "Brené Brown",
+      "totalEdition": 3,
+      "publishYear": 2012
+    },
+    {
+      "id": 11,
+      "img": "https://covers.openlibrary.org/b/id/10580123-L.jpg",
+      "bookName": "Thinking, Fast and Slow",
+      "author": "Daniel Kahneman",
+      "totalEdition": 4,
+      "publishYear": 2011
+    },
+    {
+      "id": 12,
+      "img": "https://covers.openlibrary.org/b/id/10579522-L.jpg",
+      "bookName": "Outliers",
+      "author": "Malcolm Gladwell",
+      "totalEdition": 6,
+      "publishYear": 2008
+    },
+    {
+      "id": 13,
+      "img": "https://covers.openlibrary.org/b/id/10579891-L.jpg",
+      "bookName": "Grit",
+      "author": "Angela Duckworth",
+      "totalEdition": 2,
+      "publishYear": 2016
+    },
+    {
+      "id": 14,
+      "img": "https://covers.openlibrary.org/b/id/10579633-L.jpg",
+      "bookName": "Drive",
+      "author": "Daniel H. Pink",
+      "totalEdition": 3,
+      "publishYear": 2009
+    },
+    {
+      "id": 15,
+      "img": "https://covers.openlibrary.org/b/id/10579201-L.jpg",
+      "bookName": "Deep Work",
+      "author": "Cal Newport",
+      "totalEdition": 2,
+      "publishYear": 2016
+    },
+    {
+      "id": 16,
+      "img": "https://covers.openlibrary.org/b/id/10579530-L.jpg",
+      "bookName": "Start With Why",
+      "author": "Simon Sinek",
+      "totalEdition": 4,
+      "publishYear": 2009
+    },
+    {
+      "id": 17,
+      "img": "https://covers.openlibrary.org/b/id/10579388-L.jpg",
+      "bookName": "Can't Hurt Me",
+      "author": "David Goggins",
+      "totalEdition": 2,
+      "publishYear": 2018
+    },
+    {
+      "id": 18,
+      "img": "https://covers.openlibrary.org/b/id/10579641-L.jpg",
+      "bookName": "Man's Search for Meaning",
+      "author": "Viktor E. Frankl",
+      "totalEdition": 9,
+      "publishYear": 1946
+    },
+    {
+      "id": 19,
+      "img": "https://covers.openlibrary.org/b/id/10579233-L.jpg",
+      "bookName": "12 Rules for Life",
+      "author": "Jordan B. Peterson",
+      "totalEdition": 3,
+      "publishYear": 2018
+    },
+    {
+      "id": 20,
+      "img": "https://covers.openlibrary.org/b/id/10579510-L.jpg",
+      "bookName": "The War of Art",
+      "author": "Steven Pressfield",
+      "totalEdition": 4,
+      "publishYear": 2002
+    }
+  ]
+  
