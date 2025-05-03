@@ -11,7 +11,7 @@ const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const { loginUser } = use(AuthContext);
+  const { loginUser ,resetUser} = use(AuthContext);
 
   const handelLogin = (e) => {
     e.preventDefault();
@@ -33,6 +33,25 @@ const Login = () => {
       });
   };
 
+  const handelReset = () => {
+    const emailInput = document.querySelector("input[name='email']");
+    const email = emailInput?.value;
+  
+    if (!email) {
+      toast.error("Please enter your email first.");
+      return;
+    }
+  
+    resetUser(email)
+      .then(() => {
+        toast.success("Password reset email sent!");
+      })
+      .catch((error) => {
+        console.error(error.message);
+        toast.error("Failed to send reset email.");
+      });
+  };
+  
   return (
     <>
       <form
@@ -88,7 +107,7 @@ const Login = () => {
               required
             />
             <span
-              className="absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer"
+              className="absolute right-4 top-1/2 -translate-y-1/2 cursor-pointer"
               onClick={() => setShow(!show)}
             >
               {show ? <FaEye /> : <FaEyeSlash />}
@@ -97,7 +116,7 @@ const Login = () => {
         </div>
 
         <div className="mt-3 text-right">
-          <a href="#" className="text-sm text-indigo-500 hover:underline">
+          <a onClick={handelReset} href="#" className="text-sm text-indigo-500 hover:underline">
             Forgot password?
           </a>
         </div>

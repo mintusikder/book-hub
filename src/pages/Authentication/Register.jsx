@@ -2,8 +2,8 @@ import React, { useState, useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router"; // fixed incorrect import
 import { AuthContext } from "../../provider/AuthProvider";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // important import
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css"; // important import
 
 const Register = () => {
   const [show, setShow] = useState(false);
@@ -95,7 +95,7 @@ const Register = () => {
             required
           />
           <span className="mr-4 cursor-pointer" onClick={() => setShow(!show)}>
-            {show ? <FaEyeSlash /> : <FaEye />}
+            {show ? <FaEye /> : <FaEyeSlash />}
           </span>
         </div>
 
