@@ -1,19 +1,20 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router";
-
+import { Link, NavLink } from "react-router";
+import logo  from "../../assets/logo.png"
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
     <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
       {/* Logo */}
-      <a href="#">
+      <Link className="flex justify-center items-center" to={"/"}>
         <img
-          className="h-9"
-          src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/dummyLogo/dummyLogoColored.svg"
+          className="h-9  mr-2"
+          src= {logo}
           alt="Dummy Logo"
         />
-      </a>
+        <span className="font-bold">BookHub</span>
+      </Link>
 
       {/* Desktop Menu */}
       <div className="hidden sm:flex items-center gap-8">
