@@ -1,30 +1,52 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import { Link, NavLink } from "react-router";
-import logo  from "../../assets/logo.png"
+import logo from "../../assets/logo.png";
+import { AuthContext } from "../../provider/AuthProvider";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { user, logOut } = use(AuthContext);
+
+  const handelLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
       {/* Logo */}
       <Link className="flex justify-center items-center" to={"/"}>
-        <img
-          className="h-9  mr-2"
-          src= {logo}
-          alt="Dummy Logo"
-        />
+        <img className="h-9  mr-2" src={logo} alt="Dummy Logo" />
         <span className="font-bold">BookHub</span>
       </Link>
 
       {/* Desktop Menu */}
       <div className="hidden sm:flex items-center gap-8">
-        <NavLink to={"/"} className="text-gray-800">Home</NavLink>
-        <NavLink to={"/about"} className="text-gray-800">About</NavLink>
+        <NavLink to={"/"} className="text-gray-800">
+          Home
+        </NavLink>
+        <NavLink to={"/about"} className="text-gray-800">
+          About
+        </NavLink>
 
         {/* Login Button */}
-        <Link to={"/login"} className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full">
-          Login
-        </Link>
+        {user ? (
+          <button
+            onClick={handelLogOut}
+            className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full"
+          >
+            Log Out
+          </button>
+        ) : (
+          <Link
+            to={"/login"}
+            className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full"
+          >
+            Login
+          </Link>
+        )}
       </div>
 
       {/* Mobile Menu Toggle Button */}
@@ -52,9 +74,15 @@ const Navbar = () => {
           open ? "flex" : "hidden"
         } absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}
       >
-        <a href="#" className="block text-gray-800">Home</a>
-        <a href="#" className="block text-gray-800">About</a>
-        <a href="#" className="block text-gray-800">Contact</a>
+        <a href="#" className="block text-gray-800">
+          Home
+        </a>
+        <a href="#" className="block text-gray-800">
+          About
+        </a>
+        <a href="#" className="block text-gray-800">
+          Contact
+        </a>
         <button className="cursor-pointer px-6 py-2 mt-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full text-sm">
           Login
         </button>

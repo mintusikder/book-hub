@@ -7,6 +7,7 @@ import DetailsLayout from "../layout/DetailsLayout";
 import About from "../pages/About";
 import Login from "../pages/Authentication/Login";
 import Register from "../pages/Authentication/Register";
+import PrivateRoutes from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
   {
@@ -31,7 +32,9 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/read-more/:id",
-        Component: ReadMoreDetails,
+       element : <PrivateRoutes>
+          <ReadMoreDetails></ReadMoreDetails>
+       </PrivateRoutes>,
         loader: () => fetch("/book.json"),
       },
       {

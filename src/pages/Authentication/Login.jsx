@@ -1,9 +1,32 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React, { use } from "react";
+import { Link, useLocation, useNavigate } from "react-router";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Login = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
+  const { loginUser } = use(AuthContext);
+  const handelLogin = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email, password);
+    loginUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
-    <form className="max-w-md w-full mx-auto mt-10 text-center border border-gray-300 rounded-2xl px-8 py-10 bg-white shadow-md">
+    <form
+      onSubmit={handelLogin}
+      className="max-w-md w-full mx-auto mt-10 text-center border border-gray-300 rounded-2xl px-8 py-10 bg-white shadow-md"
+    >
       <h1 className="text-gray-900 text-3xl font-semibold">Login</h1>
       <p className="text-gray-500 text-sm mt-2">Please sign in to continue</p>
 
@@ -24,7 +47,7 @@ const Login = () => {
         </svg>
         <input
           type="email"
-          name='email'
+          name="email"
           placeholder="Email address"
           className="bg-transparent text-gray-600 placeholder-gray-400 outline-none text-sm w-full h-full"
           required
@@ -46,7 +69,7 @@ const Login = () => {
         </svg>
         <input
           type="password"
-          name='password'
+          name="password"
           placeholder="Password"
           className="bg-transparent text-gray-600 placeholder-gray-400 outline-none text-sm w-full h-full"
           required
