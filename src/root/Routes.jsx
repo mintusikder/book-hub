@@ -8,6 +8,7 @@ import About from "../pages/About";
 import Login from "../pages/Authentication/Login";
 import Register from "../pages/Authentication/Register";
 import PrivateRoutes from "./PrivateRoutes";
+import ErrorPage from "../pages/ErrorPage";
 
 export const router = createBrowserRouter([
   {
@@ -32,9 +33,11 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/read-more/:id",
-       element : <PrivateRoutes>
-          <ReadMoreDetails></ReadMoreDetails>
-       </PrivateRoutes>,
+        element: (
+          <PrivateRoutes>
+            <ReadMoreDetails></ReadMoreDetails>
+          </PrivateRoutes>
+        ),
         loader: () => fetch("/book.json"),
       },
       {
@@ -48,6 +51,10 @@ export const router = createBrowserRouter([
       {
         path: "/register",
         Component: Register,
+      },
+      {
+        path: "*",
+        Component: ErrorPage,
       },
     ],
   },
