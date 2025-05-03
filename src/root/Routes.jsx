@@ -5,6 +5,8 @@ import Books from "../components/Books/Books";
 import ReadMoreDetails from "../pages/ReadMore/ReadMoreDetails";
 import DetailsLayout from "../layout/DetailsLayout";
 import About from "../pages/About";
+import Login from "../pages/Authentication/Login";
+import Register from "../pages/Authentication/Register";
 
 export const router = createBrowserRouter([
   {
@@ -21,13 +23,12 @@ export const router = createBrowserRouter([
         path: "/books",
         Component: Books,
       },
-
     ],
   },
   {
     path: "/",
     Component: DetailsLayout,
-    children : [
+    children: [
       {
         path: "/read-more/:id",
         Component: ReadMoreDetails,
@@ -37,6 +38,14 @@ export const router = createBrowserRouter([
         path: "/about",
         Component: About,
       },
-    ]
+      {
+        path: "/login",
+        Component: Login,
+      },
+      {
+        path: "/register",
+        Component: Register,
+      },
+    ],
   },
 ]);

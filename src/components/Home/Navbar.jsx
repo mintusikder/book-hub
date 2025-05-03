@@ -22,9 +22,9 @@ const Navbar = () => {
         <NavLink to={"/about"} className="text-gray-800">About</NavLink>
 
         {/* Login Button */}
-        <button className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full">
+        <Link to={"/login"} className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full">
           Login
-        </button>
+        </Link>
       </div>
 
       {/* Mobile Menu Toggle Button */}
