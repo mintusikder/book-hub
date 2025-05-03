@@ -44,7 +44,7 @@ const Books = ({ searchQuery }) => {
             <div className="text-center mt-8">
               <button
                 onClick={handleSeeMore}
-                className="inline-block bg-gray-300 hover:bg-gray-400 transition-colors duration-200 mt-4 mb-3 ml-2 px-6 py-2 font-medium rounded text-center"
+                className="inline-block text-white bg-[#8D27AE] transition-colors duration-200 mt-4 mb-3 ml-2 px-6 py-2 font-medium rounded text-center"
               >
                 See More
               </button>

@@ -21,13 +21,13 @@ const Login = () => {
     loginUser(email, password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+        // console.log(user);
         const from = location.state?.from?.pathname || "/";
         navigate(from, { replace: true });
         toast.success("Login successful!");
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         setError("Invalid email or password. Please try again.");
         toast.error("Login failed!");
       });
@@ -116,7 +116,7 @@ const Login = () => {
         </div>
 
         <div className="mt-3 text-right">
-          <a onClick={handelReset} href="#" className="text-sm text-indigo-500 hover:underline">
+          <a onClick={handelReset} href="#" className="text-sm text-[#8D27AE] hover:underline">
             Forgot password?
           </a>
         </div>
@@ -127,14 +127,14 @@ const Login = () => {
 
         <button
           type="submit"
-          className="mt-6 w-full h-11 rounded-full bg-indigo-500 text-white font-medium hover:opacity-90 transition"
+          className="mt-6 w-full h-11 rounded-full bg-[#8D27AE] text-white font-medium hover:opacity-90 transition"
         >
           Login
         </button>
 
         <p className="text-gray-500 text-sm mt-4">
           Don’t have an account?{" "}
-          <Link to={"/register"} className="text-indigo-500 hover:underline">
+          <Link to={"/register"} className="text-[#8D27AE] hover:underline ">
             Sign up
           </Link>
         </p>

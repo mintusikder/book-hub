@@ -28,7 +28,7 @@ const Book = ({ book }) => {
       </p>
       <Link
         to={`/read-more/${id}`}
-        className="inline-block  bg-gray-300 hover:bg-gray-400transition-colors duration-200 mt-4 mb-3 ml-2 px-6 py-2 font-medium rounded text-center"
+        className="inline-block text-white bg-[#8D27AE] hover:bg-gray-400transition-colors duration-200 mt-4 mb-3 ml-2 px-6 py-2 font-medium rounded text-center"
       >
         Read More
       </Link>

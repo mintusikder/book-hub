@@ -10,7 +10,7 @@ const Navbar = () => {
     logOut()
       .then(() => {})
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   };
 
@@ -19,7 +19,7 @@ const Navbar = () => {
       {/* Logo */}
       <Link className="flex justify-center items-center" to={"/"}>
         <img className="h-9  mr-2" src={logo} alt="Dummy Logo" />
-        <span className="font-bold">BookHub</span>
+        <span className="font-bold text-[#8D27AE]">BookHub</span>
       </Link>
 
       {/* Desktop Menu */}
@@ -37,7 +37,7 @@ const Navbar = () => {
             {/* {user.displayName} */}
             <button
               onClick={handelLogOut}
-              className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full"
+              className="cursor-pointer px-8 py-2 bg-[#8D27AE]  transition text-white rounded-full"
             >
               Log Out
             </button>
@@ -45,7 +45,7 @@ const Navbar = () => {
         ) : (
           <Link
             to={"/login"}
-            className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full"
+            className="cursor-pointer px-8 py-2 bg-[#8D27AE] transition text-white rounded-full"
           >
             Login
           </Link>

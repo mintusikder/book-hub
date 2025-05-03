@@ -33,11 +33,11 @@ const Register = () => {
             navigate(from, { replace: true });
           })
           .catch((error) => {
-            console.error("Profile update error:", error);
+            // console.error("Profile update error:", error);
           });
       })
       .catch((error) => {
-        console.error("Registration error:", error);
+        // console.error("Registration error:", error);
         toast.error("Failed to register");
       });
   };
@@ -100,16 +100,16 @@ const Register = () => {
         </div>
 
         {/* Login Link */}
-        <div className="mt-5 text-left text-indigo-500">
+        <div className="mt-5 text-left text-gray-500">
           <Link to="/login" className="text-sm">
-            Already have an account? Login
+            Already have an account? <span className="text-[#8D27AE]">Login</span>
           </Link>
         </div>
 
         {/* Submit Button */}
         <button
           type="submit"
-          className="mt-6 w-full h-11 rounded-full bg-indigo-500 text-white font-medium hover:opacity-90 transition"
+          className="mt-6 w-full h-11 rounded-full bg-[#8D27AE] text-white font-medium hover:opacity-90 transition"
         >
           Register
         </button>

@@ -47,7 +47,7 @@ const ReadMoreDetails = () => {
               {/* Back Button for Mobile & Desktop */}
               <div className="flex justify-end md:justify-center mb-4">
           <button
-            className="text-sm bg-gray-300 hover:bg-gray-400 px-4 py-2 rounded-md text-gray-800 transition w-full md:w-auto"
+            className="text-sm text-white bg-[#8D27AE] px-4 py-2 rounded-md  transition w-full md:w-auto"
             onClick={() => window.history.back()}
           >
             ← Back to Home
