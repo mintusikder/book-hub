@@ -17,9 +17,9 @@ const Navbar = () => {
 
       {/* Desktop Menu */}
       <div className="hidden sm:flex items-center gap-8">
-        <a href="#" className="text-gray-800">Home</a>
-        <NavLink to={"/books"} className="text-gray-800">About</NavLink>
-        <a href="#" className="text-gray-800">Contact</a>
+        <NavLink to={"/"} className="text-gray-800">Home</NavLink>
+        <NavLink to={"/books"} className="text-gray-800">Books</NavLink>
+        <NavLink to={"/about"} className="text-gray-800">About</NavLink>
 
         {/* Search Bar */}
         <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">

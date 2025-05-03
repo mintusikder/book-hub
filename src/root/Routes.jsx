@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router";
 import Main from "../layout/Main";
 import Home from "../pages/Home";
 import Books from "../components/Books/Books";
+import ReadMoreDetails from "../pages/ReadMore/ReadMoreDetails";
+import DetailsLayout from "../layout/DetailsLayout";
 
 export const router = createBrowserRouter([
   {
@@ -11,13 +13,24 @@ export const router = createBrowserRouter([
       {
         index: true,
         Component: Home,
-        loader: () => fetch('/book.json')
+        loader: () => fetch("/book.json"),
+        hydrateFallbackElement: <p>Loading...</p>,
       },
       {
         path: "/books",
         Component: Books,
-       
       },
     ],
+  },
+  {
+    path: "/",
+    Component: DetailsLayout,
+    children : [
+      {
+        path: "/read-more/:id",
+        Component: ReadMoreDetails,
+        loader: () => fetch("/book.json"),
+      }
+    ]
   },
 ]);
