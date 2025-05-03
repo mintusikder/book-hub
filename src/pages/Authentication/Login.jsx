@@ -5,7 +5,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const from = location.state?.from?.pathname || "/";
+
   const { loginUser } = use(AuthContext);
   const handelLogin = (e) => {
     e.preventDefault();
@@ -16,6 +16,7 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        const from = location.state?.from?.pathname || "/";
         navigate(from, { replace: true });
       })
       .catch((error) => {

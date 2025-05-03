@@ -33,12 +33,15 @@ const Navbar = () => {
 
         {/* Login Button */}
         {user ? (
-          <button
-            onClick={handelLogOut}
-            className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full"
-          >
-            Log Out
-          </button>
+          <>
+            {/* {user.displayName} */}
+            <button
+              onClick={handelLogOut}
+              className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full"
+            >
+              Log Out
+            </button>
+          </>
         ) : (
           <Link
             to={"/login"}
