@@ -1,17 +1,31 @@
-import React from "react";
+import React, { use } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Register = () => {
-    const handelRegister = (e) =>{
-        e.preventDefault()
-        const name = e.target.name.value 
-        const photo = e.target.photo.value 
-        const email = e.target.email.value 
-        const password = e.target.password.value 
-        console.log(name,photo,email,password)
-    }
+    const { createUser } = use(AuthContext);
+  const handelRegister = (e) => {
+    
+    e.preventDefault();
+    const name = e.target.name.value;
+    const photo = e.target.photo.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(name, photo, email, password);
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   return (
-    <form onSubmit={handelRegister} className="max-w-md w-full mx-auto mt-10 text-center border border-gray-300 rounded-2xl px-8 py-10 bg-white shadow-md">
+    <form
+      onSubmit={handelRegister}
+      className="max-w-md w-full mx-auto mt-10 text-center border border-gray-300 rounded-2xl px-8 py-10 bg-white shadow-md"
+    >
       <h1 className="text-gray-900 text-3xl font-semibold">Register</h1>
       <p className="text-gray-500 text-sm mt-2">
         Create an account to get started
