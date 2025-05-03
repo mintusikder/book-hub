@@ -1,11 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React from "react";
+import { Link } from "react-router";
 
 const Register = () => {
+    const handelRegister = (e) =>{
+        e.preventDefault()
+        const name = e.target.name.value 
+        const photo = e.target.photo.value 
+        const email = e.target.email.value 
+        const password = e.target.password.value 
+        console.log(name,photo,email,password)
+    }
   return (
-    <form className="max-w-md w-full mx-auto mt-10 text-center border border-gray-300 rounded-2xl px-8 py-10 bg-white shadow-md">
+    <form onSubmit={handelRegister} className="max-w-md w-full mx-auto mt-10 text-center border border-gray-300 rounded-2xl px-8 py-10 bg-white shadow-md">
       <h1 className="text-gray-900 text-3xl font-semibold">Register</h1>
-      <p className="text-gray-500 text-sm mt-2">Create an account to get started</p>
+      <p className="text-gray-500 text-sm mt-2">
+        Create an account to get started
+      </p>
 
       <div className="flex items-center w-full mt-8 bg-white border border-gray-300 h-12 rounded-full overflow-hidden pl-6 gap-2">
         <svg
@@ -23,7 +33,52 @@ const Register = () => {
           />
         </svg>
         <input
+          type="text"
+          placeholder="Name"
+          name="name"
+          className="bg-transparent text-gray-600 placeholder-gray-400 outline-none text-sm w-full h-full"
+        />
+      </div>
+      <div className="flex items-center w-full mt-4 bg-white border border-gray-300 h-12 rounded-full overflow-hidden pl-6 gap-2">
+        <svg
+          width="16"
+          height="11"
+          viewBox="0 0 16 11"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M0 .55.571 0H15.43l.57.55v9.9l-.571.55H.57L0 10.45zm1.143 1.138V9.9h13.714V1.69l-6.503 4.8h-.697zM13.749 1.1H2.25L8 5.356z"
+            fill="#6B7280"
+          />
+        </svg>
+        <input
+          type="type"
+          placeholder="Photo Url"
+          name="photo"
+          className="bg-transparent text-gray-600 placeholder-gray-400 outline-none text-sm w-full h-full"
+        />
+      </div>
+      <div className="flex items-center w-full mt-4 bg-white border border-gray-300 h-12 rounded-full overflow-hidden pl-6 gap-2">
+        <svg
+          width="16"
+          height="11"
+          viewBox="0 0 16 11"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M0 .55.571 0H15.43l.57.55v9.9l-.571.55H.57L0 10.45zm1.143 1.138V9.9h13.714V1.69l-6.503 4.8h-.697zM13.749 1.1H2.25L8 5.356z"
+            fill="#6B7280"
+          />
+        </svg>
+        <input
           type="email"
+          name="email"
           placeholder="Email address"
           className="bg-transparent text-gray-600 placeholder-gray-400 outline-none text-sm w-full h-full"
           required
@@ -46,13 +101,16 @@ const Register = () => {
         <input
           type="password"
           placeholder="Password"
+          name="password"
           className="bg-transparent text-gray-600 placeholder-gray-400 outline-none text-sm w-full h-full"
           required
         />
       </div>
 
       <div className="mt-5 text-left text-indigo-500">
-        <Link to={"/login"} className="text-sm">Already have an account? Login</Link>
+        <Link to={"/login"} className="text-sm">
+          Already have an account? Login
+        </Link>
       </div>
 
       <button
@@ -68,9 +126,10 @@ const Register = () => {
           Terms of Service
         </a>{" "}
         and{" "}
-        <a href='#' className="text-indigo-500 hover:underline">
+        <a href="#" className="text-indigo-500 hover:underline">
           Privacy Policy
-        </a>.
+        </a>
+        .
       </p>
     </form>
   );

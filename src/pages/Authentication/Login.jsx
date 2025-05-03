@@ -24,6 +24,7 @@ const Login = () => {
         </svg>
         <input
           type="email"
+          name='email'
           placeholder="Email address"
           className="bg-transparent text-gray-600 placeholder-gray-400 outline-none text-sm w-full h-full"
           required
@@ -45,6 +46,7 @@ const Login = () => {
         </svg>
         <input
           type="password"
+          name='password'
           placeholder="Password"
           className="bg-transparent text-gray-600 placeholder-gray-400 outline-none text-sm w-full h-full"
           required
