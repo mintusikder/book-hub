@@ -11,11 +11,12 @@ export const router = createBrowserRouter([
       {
         index: true,
         Component: Home,
+        loader: () => fetch('/book.json')
       },
       {
         path: "/books",
         Component: Books,
-        loader: () => fetch('/public/book.json'),
+       
       },
     ],
   },

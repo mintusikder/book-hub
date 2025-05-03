@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -17,7 +18,7 @@ const Navbar = () => {
       {/* Desktop Menu */}
       <div className="hidden sm:flex items-center gap-8">
         <a href="#" className="text-gray-800">Home</a>
-        <a href="#" className="text-gray-800">About</a>
+        <NavLink to={"/books"} className="text-gray-800">About</NavLink>
         <a href="#" className="text-gray-800">Contact</a>
 
         {/* Search Bar */}
